@@ -115,8 +115,9 @@ if (check_phonenumber($phone)) {
 			['❌ Bekor qilish']
 		]);
 
-		$message = "🖼 Suratdagi misolni javobini yuboring:";
-		$tg->send_chatAction('upload_photo')->send_photo($data['img'], $message);
+		// Misol yuborish uchun kod
+		$message = "📝 Quyidagi misolni yeching:\n\n5 + 3 = ?";
+		$tg->sendMessage($message);
 		
 	}else{
 		$message = "⚠️ Opendudget saytida yuklama oshganligi sababli ulanishlarda xatolik yuz berdi. Iltimos keyinroq ovoz berishga qaytadan urinib ko'ring";
